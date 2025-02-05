@@ -1,0 +1,189 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('back.avif') center/cover no-repeat; /* Set background image for entire page */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 51, 102, 0.8); /* Add slight opacity to make text stand out against background */
+    padding: 15px 20px;
+    color: black; /* Change header text color to black */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    color: black;
+    padding: 80px 20px;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #003366;
+}
+
+/* Footer */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #003366;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+/* Flip Card Container */
+.flip-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    border-radius: 12px;
+}
+
+/* Flip Card Inner */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Flip Card Front & Back */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Front Side */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Back Side */
+.flip-card-back {
+    background: rgba(255, 255, 255, 0.9); /* White semi-transparent */
+    color: #333333; /* Dark gray text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    padding: 20px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Blurred Background */
+.blurred-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 12px;
+}
+
+/* Flip Effect */
+.flip-card:hover .flip-card-inner,
+.flip-card:active .flip-card-inner {
+    transform: rotateY(180deg);
+}
