@@ -14,52 +14,99 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 51, 102, 0.8); /* Add slight opacity to make text stand out against background */
-    padding: 15px 20px;
+    background: white; /* Add slight opacity to make text stand out against background */
+    padding: 15px 100px 15px 20px;
     color: black; /* Change header text color to black */
+    overflow: hidden; /* Ensures the header height remains fixed */
+    height: 70px; /* Fixed height for the header */
 }
 
 /* Logo */
 .logo {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .logo img {
-    width: 50px;
+    height: 80px; /* Increase logo height */
+    object-fit: contain; /* Ensures the image scales without distortion */
     margin-right: 10px;
+    position: absolute; /* Prevents the image from increasing the header height */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Navigation */
 nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* Remove bullets from the list */
+    display: flex; /* Arrange menu items in a row */
+    justify-content: space-around; /* Distribute menu items evenly */
+    flex: 1; /* Allow the menu to take up available space */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* Add equal horizontal spacing between menu items */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: #003366; /* Set link color */
+    text-decoration: none; /* Remove underline from links */
     font-weight: bold;
+    font-family: 'Lexend Deca', sans-serif; /* Make text bold */
+    font-size:100;
 }
 
+.register-btn {
+    padding: 8px 15px;
+    background-color:#003366; /* Orange color for the button */
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-left: 30px; /* Adjust distance to the left */
+    margin-right: 0;
+}
+
+.register-btn:hover {
+    background-color: #031e39; /* Darker orange on hover */
+}
+
+/* Menu Toggle for Responsive Design */
 .menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+    display: none; /* Hide the menu toggle by default */
+    font-size: 1.5rem; /* Set the font size for the menu icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 /* Banner */
 .banner {
-    text-align: center;
-    color: black;
-    padding: 80px 20px;
+    max-width: 1200px;  /* Adjust the maximum width as needed */
+    margin: 0 auto;  /* Centers the content */
+    padding: 80px 20px;  /* Adds padding around the content */
+    text-align: left;  /* Aligns text to the left */
+    color: black;  /* Sets the text color */
 }
+
+.banner h2 {
+    text-align: left;  /* Aligns the heading to the left */
+    font-size: 2rem;  /* Adjust the font size for the heading */
+    margin-bottom: 20px; 
+    font-family: 'Lexend Deca', sans-serif;
+    color:#003366; 
+    font-weight: 700;/* Adds some space below the heading */
+}
+
+.banner p {
+    line-height: 1.6;  /* Makes the paragraph text more readable */
+    font-size: 1rem;  /* Adjust the font size for the paragraph */
+    margin: 0;
+    font-family: Roboto;
+      /* Removes default margins */
+}
+
 
 /* Sections */
 section {
