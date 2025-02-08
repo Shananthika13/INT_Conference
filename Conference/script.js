@@ -6,3 +6,4 @@ document.addEventListener("DOMContentLoaded", () => {
         navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
     });
 });
+
