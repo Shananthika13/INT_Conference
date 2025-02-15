@@ -134,6 +134,7 @@ nav ul li a {
     font-size: 1rem;  /* Adjust the font size for the paragraph */
     margin: 0;
     font-family: Roboto;
+    text-align: justify;
       /* Removes default margins */
 }
 
@@ -329,4 +330,26 @@ th {
 /* Hover Effect */
 tr:hover {
     background-color: #f1f1f1;
+}
+
+.button-container {
+    display: flex;
+    gap: 80px; /* Space between buttons */
+    justify-content: center; 
+    margin-top:20px;
+    
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color:#031e39;
 }
